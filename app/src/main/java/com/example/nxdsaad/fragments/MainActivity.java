@@ -24,9 +24,7 @@ public class MainActivity extends AppCompatActivity implements ListSelectionList
             return;
         } else {
             fragmentManager.popBackStack();
-            //super.onBackPressed();
         }
-
     }
 
     @Override
@@ -41,6 +39,10 @@ public class MainActivity extends AppCompatActivity implements ListSelectionList
         fragmentManager = getFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.titles, new ItemFragment());
+        fragmentManager
+                .beginTransaction().replace(R.id.details, mDetailsFragment1)
+                .addToBackStack("F1")
+                .commit();
         fragmentTransaction.commit();
     }
 
@@ -53,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements ListSelectionList
                     // Tell the QuoteFragment to show the quote string at position index
                     mDetailsFragment1.showQuoteAtIndex(index);
                 }*/
-                //mDetailsFragment1.showQuoteAtIndex(index);
                 fragmentManager
                         .beginTransaction().replace(R.id.details, mDetailsFragment1)
                         .addToBackStack("F1")
@@ -72,7 +73,5 @@ public class MainActivity extends AppCompatActivity implements ListSelectionList
                         .commit();
                 break;
         }
-
     }
-
 }
