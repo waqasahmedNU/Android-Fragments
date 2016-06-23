@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Fragments</string>
+    <string-array name="Items">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+    </string-array>
+    <string-array name="Details">
+        <item>Details about item 1</item>
+        <item>Details about item 2</item>
+        <item>Details about item 3</item>
+    </string-array>
 </resources>
